@@ -41,3 +41,8 @@ function loop() {
 }
 
 startGame();
+
+window.toggleRelics = function () {
+    const menu = document.getElementById("relicMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+};
