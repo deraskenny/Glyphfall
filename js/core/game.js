@@ -1,3 +1,5 @@
+console.log("GAME.JS GELADEN");
+
 import { initCombatimport { initCombat, combatTick } from "../systems/combat.js";
 import { initGlyphs, glyphTick } from "../systems/glyphs.js";
 import { initRelics } from "../systems/relics.js";
