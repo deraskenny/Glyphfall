@@ -1,58 +1,7 @@
-console.log("GAME.JS GELADEN");
+console.log("GAME.JS LÄUFT");
 
-import { initCombatimport { initCombat, combatTick } from "../systems/combat.js";
-import { initGlyphs, glyphTick } from "../systems/glyphs.js";
-import { initRelics } from "../systems/relics.js";
-import { initMeta } from "../systems/meta.js";
-import { render } from "../render/canvas.js";
-import { updateFX } from "../render/effects.js";
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
 
-export const gameState = {
-    run: 1,
-    wave: 1,
-    maxHp: 100,
-    hp: 100,
-
-    glyphs: [],
-    relics: [],
-
-    enemy: null,
-
-    inCombat: true, // 🔴 DAS IST ENTSCHEIDEND
-
-    meta: {
-        essence: 0,
-        metaDmg: 0,
-        metaHp: 0,
-        startGlyphs: 1
-    },
-
-    particles: [],
-    texts: []
-};
-
-export function startGame() {
-    initMeta(gameState);
-    initGlyphs(gameState);
-    initRelics(gameState);
-    initCombat(gameState);
-
-    gameState.inCombat = true; // 🔴 EXPLIZIT setzen
-
-    requestAnimationFrame(loop);
-}
-
-function loop() {
-    combatTick(gameState);
-    glyphTick(gameState);
-    updateFX(gameState);
-    render(gameState);
-    requestAnimationFrame(loop);
-}
-
-startGame();
-
-window.toggleRelics = function () {
-    const menu = document.getElementById("relicMenu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-};
+ctx.fillStyle = "red";
+ctx.fillRect(40, 40, 120, 120);
