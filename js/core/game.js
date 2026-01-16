@@ -1,36 +1,9 @@
-import { initCombat, combatTick, spawnEnemy } from "../systems/combat.js";
-import { initGlyphs, glyphTick } from "../systems/glyphs.js";
-import { render } from "../render/canvas.js";
-import { updateFX } from "../render/effects.js";
-
 window.addEventListener("load", () => {
-    console.log("GAME START");
-
     const canvas = document.getElementById("game");
-
-    // GameState
-    const gameState = {
-        wave: 1,
-        enemy: null,
-        glyphs: [],
-        relics: [],
-        inCombat: true,
-        particles: [],
-        texts: []
-    };
-
-    // Init
-    initGlyphs(gameState);
-    initCombat(gameState);
-
-    // Game Loop
-    function loop() {
-        combatTick(gameState);
-        glyphTick(gameState);
-        updateFX(gameState);
-        render(gameState);
-        requestAnimationFrame(loop);
-    }
-
-    loop();
+    canvas.width = Math.min(window.innerWidth*0.9,360);
+    canvas.height = canvas.width*16/9;
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle="red";
+    ctx.fillRect(20,20,100,100);
+    console.log("Canvas Test OK");
 });
