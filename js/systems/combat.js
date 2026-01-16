@@ -1,5 +1,6 @@
 export function initCombat(state) {
     spawnEnemy(state);
+    state.inCombat = true;
 }
 
 export function combatTick(state) {
