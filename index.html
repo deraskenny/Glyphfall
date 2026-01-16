@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glyphfall Modular</title>
-<link rel="stylesheet" href="CSS/style.css">
+    <meta charset="UTF-8">
+    <title>Glyphfall Idle Roguelite</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<h1>Glyphfall</h1>
 <canvas id="game" width="360" height="640"></canvas>
 
-<script>
-console.log("INLINE TEST");
-const canvas = document.getElementById("game");
-const ctx = canvas.getContext("2d");
-ctx.fillStyle = "red";
-ctx.fillRect(50,50,100,100);
-</script>
-
-<script src="js/core/game.js"></script>
-
-<div id="ui">
-    <div class="panel">
-        Run <span id="run"></span> | Welle <span id="wave"></span><br>
-        HP <span id="hp"></span> | DPS <span id="dps"></span><br>
-        Essenz <span id="essence"></span>
-    </div>
-    <button onclick="toggleRelics()">🧿 Relikte</button>
+<!-- Minimal-Relikt-Menü -->
+<div id="relic-menu">
+    <h3>Relikte</h3>
+    <ul id="relic-list"></ul>
 </div>
 
-<div id="overlay"></div>
-<div id="relicMenu">
-<h2>Relikte</h2>
-<div id="relicList"></div>
-<button onclick="toggleRelics()">Schließen</button>
-</div>
+<script type="module" src="js/core/game.js"></script>
+</body>
+</html></div>
 
 </body>
 </html>
