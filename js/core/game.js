@@ -34,6 +34,9 @@ export function startGame() {
     initGlyphs(gameState);
     initRelics(gameState);
     initCombat(gameState);
+
+    gameState.inCombat = true; // 🔴 EXPLIZIT setzen
+
     requestAnimationFrame(loop);
 }
 
