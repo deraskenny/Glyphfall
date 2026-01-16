@@ -55,5 +55,3 @@ function spawnHit(state, x, y, dmg){
     for(let i=0;i<6;i++)
         state.particles.push({x,y,vx:(Math.random()-.5)*3,vy:(Math.random()-.5)*3,life:20});
 }
-
-import { showRelicChoice } from "./relics.js";
