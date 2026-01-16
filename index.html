@@ -10,7 +10,17 @@
 </head>
 <body>
 
-<canvas id="game" width="360" height="520"></canvas>
+<canvas id="game" width="360" height="640"></canvas>
+
+<script>
+console.log("INLINE TEST");
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "red";
+ctx.fillRect(50,50,100,100);
+</script>
+
+<script src="js/core/game.js"></script>
 
 <div id="ui">
     <div class="panel">
@@ -27,8 +37,6 @@
 <div id="relicList"></div>
 <button onclick="toggleRelics()">Schließen</button>
 </div>
-
-<script src="js/core/game.js"></script>
 
 </body>
 </html>
