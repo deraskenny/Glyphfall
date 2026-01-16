@@ -1,8 +1,9 @@
-import { initCombat, combatTick } from "../systems/combat.js";
+import { initCombatimport { initCombat, combatTick } from "../systems/combat.js";
 import { initGlyphs, glyphTick } from "../systems/glyphs.js";
-import { initRelics, showRelicChoice } from "../systems/relics.js";
-import { initMeta, addEssence } from "../systems/meta.js";
-import { render, updateFX } from "../render/canvas.js";
+import { initRelics } from "../systems/relics.js";
+import { initMeta } from "../systems/meta.js";
+import { render } from "../render/canvas.js";
+import { updateFX } from "../render/effects.js";
 
 export const gameState = {
     run: 1,
