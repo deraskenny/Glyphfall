@@ -1,7 +1,9 @@
-console.log("GAME.JS LÄUFT");
+console.log("GAME.JS START");
 
-const canvas = document.getElementById("game");
-const ctx = canvas.getContext("2d");
+// ❌ ALLE imports erstmal auskommentiert
+// import { initCombat } from "../systems/combat.js";
+// import { initGlyphs } from "../systems/glyphs.js";
+// import { render } from "../render/canvas.js";
+// import { updateFX } from "../render/effects.js";
 
-ctx.fillStyle = "red";
-ctx.fillRect(40, 40, 120, 120);
+console.log("NO IMPORTS – OK");
