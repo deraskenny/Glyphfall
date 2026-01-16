@@ -10,18 +10,23 @@ export const gameState = {
     wave: 1,
     maxHp: 100,
     hp: 100,
+
     glyphs: [],
     relics: [],
-    enemy: {},
+
+    enemy: null,
+
+    inCombat: true, // 🔴 DAS IST ENTSCHEIDEND
+
     meta: {
         essence: 0,
         metaDmg: 0,
         metaHp: 0,
         startGlyphs: 1
     },
+
     particles: [],
-    texts: [],
-    inCombat: true
+    texts: []
 };
 
 export function startGame() {
