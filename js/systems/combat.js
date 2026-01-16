@@ -30,13 +30,16 @@ export function combatTick(state) {
     }
 }
 
-export function spawnEnemy(state){
-    let boss = state.wave % 5 === 0;
+export function spawnEnemy(state) {
+    const boss = state.wave % 5 === 0;
+
     state.enemy = {
-        x: 180, y: 120, r: boss?32:24,
-        maxHp: (50+state.wave*20)*(boss?3:1),
-        hp: (50+state.wave*20)*(boss?3:1),
-        dmg: (2+state.wave)*(boss?1.5:1),
+        x: 180,
+        y: 140,
+        r: boss ? 32 : 24,
+        maxHp: (50 + state.wave * 20) * (boss ? 3 : 1),
+        hp: (50 + state.wave * 20) * (boss ? 3 : 1),
+        dmg: (2 + state.wave) * (boss ? 1.5 : 1),
         boss
     };
 }
