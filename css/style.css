@@ -1,3 +1,4 @@
+/* Grundlayout */
 body {
     margin: 0;
     padding: 0;
@@ -5,20 +6,63 @@ body {
     background-color: #141422;
     color: white;
     text-align: center;
+    overflow-x: hidden; /* verhindert horizontales Scrollen */
 }
 
+/* Canvas zentrieren und skalieren */
 canvas {
     display: block;
     margin: 0 auto;
     background-color: #000000;
     border: 2px solid #333;
+
+    /* responsiv */
+    width: 90vw;   /* 90% der Viewport-Breite */
+    max-width: 360px; /* maximale Breite */
+    height: auto;  /* Höhe automatisch proportional */
 }
 
+/* Relikt-Menü */
 #relic-menu {
-    position: absolute;
+    position: fixed; /* bleibt sichtbar beim Scrollen */
     top: 10px;
     right: 10px;
     background: rgba(20,20,30,0.9);
-    padding: 10px;
+    padding: 8px 12px;
     border-radius: 10px;
+    max-width: 40vw; /* nicht zu breit auf Handy */
+    font-size: 0.9em;
+    z-index: 10;
+}
+
+/* Überschriften skalieren */
+h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Reliktliste */
+#relic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Listeneinträge */
+#relic-list li {
+    margin: 4px 0;
+}
+
+/* Kleinere Bildschirme anpassen */
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.2em;
+    }
+    #relic-menu {
+        max-width: 50vw;
+        font-size: 0.8em;
+    }
+    canvas {
+        width: 95vw;
+    }
 }
